@@ -1,6 +1,7 @@
 # Resi_SilviScanStudy
 
-THis Repo contains the intial text, datat sets and analysis code used in the manuscript submitted to the journal Forests as part of a Special Interest edition "SI: Recent Advances in Nondestructive Evaluation of Wood: In-Forest Wood Quality Assessments" guest edited by Xipang Wang.
+THis Repo contains the intial text, datat sets and analysis code used in the manuscript submitted to the journal Forests as part of a Special Interest edition "SI: Recent Advances in Nondestructive Evaluation of Wood: In-Forest Wood Quality Assessments" guest edited by Xiping Wang, Research Forest Products Technologist
+Forest Service, Forest Products Laboratory.
 
 The title of the submitted version is "A comparison of radial wood property variation in Pinus radiata between an IML PD-400 ‘Resi’ instrument and increment cores analysed by SilviScan".
 
