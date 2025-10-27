@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "locale": "en_AU",
+  "platform": "4.3.3",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "Rmd/HPPResi_SilviScanAnalysis-radiata_journalVersion_10mm.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    "data/FCNSW_HPP_HVP SilviScan study ResiData_ResiValues_10mm.Resi": {
+      "checksum": "d6d0e8984ab16424f8c15c253ab9c88e"
+    },
+    "data/Oberon Test ssData_09 Sep 2021.ssData": {
+      "checksum": "d747e5f9da2f808cad6bb3147f911e91"
+    },
+    "data/TableData.xlsx": {
+      "checksum": "6824057acaeac9f430a62684d09d81d3"
+    },
+    "data/ThreeResiCalibrationData_2021-10-26.xlsx": {
+      "checksum": "b8ae096b6de390287953920b2a7eb98d"
+    },
+    "images/FigureDiscImage.jpg": {
+      "checksum": "fe8f51d2f68fd020a5e0315961db3927"
+    },
+    "images/SiteDataTable.png": {
+      "checksum": "fdc4763f7f3ec03e06a801e0a4e539c7"
+    },
+    "images/SSsample.jpg": {
+      "checksum": "9b9cbb4f25c5c81168d76cdcf7a555f2"
+    },
+    "images/SSstrip_cells.jpg": {
+      "checksum": "ec3c37a6ecb5fdc3144cfc5d6767dcfd"
+    },
+    "images/SSstrip-removebg-preview.png": {
+      "checksum": "d329f2e50ae57dc4ec869c644025f83c"
+    },
+    "LICENSE": {
+      "checksum": "e62637ea8a114355b985fd86c9ffbd6e"
+    },
+    "R/PlottingFunctions.R": {
+      "checksum": "e18935dfa84913302fd47a9f5d3b7da5"
+    },
+    "R/PrepareIntervalData.R": {
+      "checksum": "421a48b26efae95015f958f49bfafcfa"
+    },
+    "README.md": {
+      "checksum": "b5ba7ab203e67125558dcc40c2283bf8"
+    },
+    "Rmd/BiologicalReviews.csl": {
+      "checksum": "fa477c1bb2f8d9a295f7b7a8e6c9ab00"
+    },
+    "Rmd/HPPResi_SilviScanAnalysis-radiata_journalVersion_10mm.docx": {
+      "checksum": "bd5f62018a95277cfcc83a145dc5eb65"
+    },
+    "Rmd/HPPResi_SilviScanAnalysis-radiata_journalVersion_10mm.html": {
+      "checksum": "4c60735a0d320046389bf269e9da7544"
+    },
+    "Rmd/HPPResi_SilviScanAnalysis-radiata_journalVersion_10mm.Rmd": {
+      "checksum": "5d62fdac0037fe9ed4f8a2c6e1e317d8"
+    },
+    "Rmd/references.bibtex": {
+      "checksum": "348067513c1b9553c964bcb527d8d2bd"
+    },
+    "Rmd/ThreeResi_SilviScanAnalysis-radiata.pdf": {
+      "checksum": "53b6d1f7cafaac07641aab6c8308d269"
+    }
+  },
+  "users": null
+}
