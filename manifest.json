@@ -6,7 +6,7 @@
     "appmode": "static",
     "primary_rmd": null,
     "primary_html": "Rmd/HPPResi_SilviScanAnalysis-radiata_journalVersion_10mm.html",
-    "content_category": null,
+    "content_category": "site",
     "has_parameters": false
   },
   "packages": null,
@@ -48,7 +48,7 @@
       "checksum": "421a48b26efae95015f958f49bfafcfa"
     },
     "README.md": {
-      "checksum": "b5ba7ab203e67125558dcc40c2283bf8"
+      "checksum": "af6fba0e44d5e4f2268c9c8c2b61213b"
     },
     "Rmd/BiologicalReviews.csl": {
       "checksum": "fa477c1bb2f8d9a295f7b7a8e6c9ab00"
