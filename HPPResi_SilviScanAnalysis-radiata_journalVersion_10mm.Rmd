@@ -54,6 +54,7 @@ options(knitr.table.format = 'latex')
 #Read in Excel worksheet
 #
 rm(list = ls())    #Clean the work space
+library(jsonlite)
 library(tidyverse) #Loads ggplot2, tibble, dplyr, readr, purrr, stringr, forcats
 library(data.table)
 library(readxl)
@@ -73,11 +74,11 @@ library(grDevices)   #For superscripts in caption
 #library(drc)        #Michaeilis-Menton curve fitting
 
 #library(shiny)
-library(jsonlite)
+
 library(colorRamps) # provides green2red divergent colormap which I like 
 
-source("../R/PlottingFunctions.R")
-source("../R/PrepareIntervalData.R")
+source("R/PlottingFunctions.R")
+source("R/PrepareIntervalData.R")
 
 ```
 
@@ -105,7 +106,7 @@ Twenty trees per site were sampled and felled for sawn timber processing to asse
 
 ```{r SiteInfoTable, align = "center", out.width="100%"}
 
-tbl1 <- data.table(read_excel("../data/TableData.xlsx", sheet = "Table1"))
+tbl1 <- data.table(read_excel("data/TableData.xlsx", sheet = "Table1"))
 tbl1$Site <- c(1:9)
 tbl1$Latitude <- round(tbl1$Latitude,2)
 tbl1$Longitude <- round(tbl1$Longitude,2)
@@ -145,7 +146,7 @@ From three trees at each site, selected to cover the range in breast height diam
 
 ```{r SSsample, fig.width = 10, fig.align = "left", fig.cap = "Twenty trees were selected as sawlogs from each site. Plugs were inserted in the outerwoood core sampling hole to assist in identifying individual butt logs in the log yard, and on three trees per site full radius cores were taken for SilviScan analyses."}
 
-knitr::include_graphics("../images/SSsample.jpg")
+knitr::include_graphics("images/SSsample.jpg")
 
 ```
 
@@ -153,7 +154,7 @@ Given the potential for wood properties to vary significantly within a relativel
 
 ```{r DiscImage, fig.align = "left", fig.cap = "Disc cross section illustrating the effect on radial length and annual ring count on SilviScan profiles and Resi traces. The white arrow indicates the direct bark-to-pith trajectory obtained from the SilviScan analyses.", out.width="50%"}
 
-knitr::include_graphics("../images/FigureDiscImage.jpg")
+knitr::include_graphics("images/FigureDiscImage.jpg")
 
 ```
 
@@ -171,7 +172,7 @@ An important issue in comparing Resi and SilviScan data was the way the SilviSca
 
 ```{r SSImage,fig.align = "left", fig.cap = "A typical surface image used by SilviScan to determine fibre dimensions on the right hand side.  On the left is a SilviScan bark-to-pith strip prepared from the increment core that was missing the pith. The red arrows illustrate the orientation of the rays (and the direction of the pith), that are vertically aligned in the microscope image used by SilviScan. The right hand image from top to bottom represents 1 mm of radial distance.", out.width="70%"}
 
-knitr::include_graphics("../images/SSstrip_cells.jpg")
+knitr::include_graphics("images/SSstrip_cells.jpg")
 
 
 ```
@@ -185,7 +186,7 @@ All analyses and reporting was done in R [@RN1623] using RMarkdown [@RN1625] wit
 ```{r LoadSilviScan}
 #Read in the SS data produced after processing data on the resi web platform.  
 
-rdsData <- readRDS("../data/Oberon Test ssData_09 Sep 2021.ssData")
+rdsData <- readRDS("data/Oberon Test ssData_09 Sep 2021.ssData")
 #names(rdsData)
 
 sNames <- unique(rdsData$profileNames)
@@ -216,8 +217,8 @@ for (i in 1:length(sNames)) {
 ```
 
 ```{r LoadResi, echo=FALSE}
-fList <- list.files("../data-Rad/Resi", pattern = ".Resi")
-fpath <- as.character(paste0("../data/","FCNSW_HPP_HVP SilviScan study ResiData_ResiValues_10mm.Resi"))
+fList <- list.files("data-Rad/Resi", pattern = ".Resi")
+fpath <- as.character(paste0("data/","FCNSW_HPP_HVP SilviScan study ResiData_ResiValues_10mm.Resi"))
 rds <- readRDS(fpath)
 #names(rds)
 
@@ -286,7 +287,7 @@ The outer 50mm of the SilviScan profile was likewise compared with the basic den
 
 #Read in the datasets required for the calibration process
 #       Read in the Actual outerwood density values 
-denData <- data.table(read_excel("../data/ThreeResiCalibrationData_2021-10-26.xlsx", sheet = "CalDataforSS_ResiPaper"))
+denData <- data.table(read_excel("data/ThreeResiCalibrationData_2021-10-26.xlsx", sheet = "CalDataforSS_ResiPaper"))
 resiCode <- rev(unique(denData$ResiCode))
 
 #Keep only the HPP data
