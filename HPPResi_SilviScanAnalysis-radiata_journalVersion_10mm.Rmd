@@ -1,3 +1,5 @@
+------------------------------------------------------------------------
+
 ---
 title: A comparison of radial wood property variation in *Pinus radiata* between three
   different IML PD-400 'Resi' instruments and increment cores analysed by SilviScan.
@@ -41,12 +43,7 @@ text-align: justify}
 </style>
 ```
 
-
-```r
-if (!require(jsonlite)) {
-  install.packages("jsonlite")
-  library(jsonlite)
-}
+``` r
 ```
 
 ------------------------------------------------------------------------
@@ -54,14 +51,19 @@ if (!require(jsonlite)) {
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message = FALSE, warning = FALSE)
 
-#options(knitr.table.format = 'html')
-options(knitr.table.format = 'latex')
+options(knitr.table.format = 'html')
+#options(knitr.table.format = 'latex')
 
 #https://bookdown.org/yihui/rmarkdown-cookbook/hide-one.html
 #https://bookdown.org/yihui/rmarkdown-cookbook/n
 #Read in Excel worksheet
 #
 rm(list = ls())    #Clean the work space
+
+if (!require(jsonlite)) {
+  install.packages("jsonlite")
+  library(jsonlite)
+}
 library(jsonlite)
 library(tidyverse) #Loads ggplot2, tibble, dplyr, readr, purrr, stringr, forcats
 library(data.table)
@@ -698,12 +700,11 @@ A noted feature of the Resi trace is the presence of resistance on the needle af
 
 An additional aspect for investigation is the effect of bark thickness on the non-linear corrections. @RN1622 used discs with bark removed, thus the Resi traces started in wood immediately beneath the cambium. The Resi traces collected here were on standing trees so that bark effects may be a contributing factor. The radial pattern of the density differences for this study were examined when bark thickness was added to the segment data (Figure \@ref(fig:intervalComparisonNonLinear)a) and a logarithmic model fitted to the relationship as defined below.
 
-```{=tex}
 \begin{equation} 
 BasicDensityAdjustment = -71.0 + 18.17 * ln("distance-from-entry")
 (\#eq:model)
 \end{equation}
-```
+
 Adjusting the Resi-derived basic density data using equation \@ref(eq:model) increased the variance explained to 74% (Figure \@ref(fig:intervalComparisonNonLinear)b) and removed the under-prediction of basic density in the first segment (Figure \@ref(fig:intervalComparisonNonLinear)c). Based on the equation \@ref(eq:model) the adjustment became zero at around 50mm from the start of the Resi trace. Given the variation in bark thickness, the contrast between bark density and wood density and consequent effects on needle friction, the degree to which this effect should be accounted for requires further investigation.
 
 ```{r intervalComparisonNonLinear, echo=FALSE, fig.height=9, fig.width=10, fig.align='center', fig.cap="(a) (b) mean corrected Resi-predicted density of 20 mm segments compared to the SilviScan density values (c) "}
