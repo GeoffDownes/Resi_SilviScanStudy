@@ -1,5 +1,3 @@
-------------------------------------------------------------------------
-
 ---
 title: A comparison of radial wood property variation in *Pinus radiata* between three
   different IML PD-400 'Resi' instruments and increment cores analysed by SilviScan.
@@ -7,10 +5,6 @@ author: Geoffrey M. Downes, Jonathan Harrington, David M. Drew, David S. Lee, Ma
   Lausberg, Phillip Muyambo and Duncan Watt
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    toc: yes
-    toc_depth: '3'
-    df_print: paged
   bookdown::html_document2:
     df_print: paged
     number_sections: no
@@ -21,6 +15,10 @@ output:
     toccolor: black
     theme: united
     anchor_sections: yes
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    df_print: paged
   bookdown::pdf_document2:
     keep_tex: yes
     number_sections: no
@@ -713,8 +711,8 @@ Adjusting the Resi-derived basic density data using equation \@ref(eq:model) inc
 x <- DT$DistanceFromEntry
 y <- DT$Diff
 #y[which(DT$DistanceFromEntry > 80)] = 0
-
-df <- na.omit(data.table(Group = as.factor(DT$Intervals), x = x ,y = y))
+Group <- as.factor(DT$Intervals)
+df <- na.omit(data.table(Group, x = x ,y = y))
 xmn = 0; xmx = 120; ymn = -80; ymx = 80
 yLab <- expression(paste("Density difference (kg/",m^3 ,")"))
 xLab <- "Distance from Entry ( mm)"
@@ -727,7 +725,7 @@ a <- predict(mod)
 
 #Basic_Density_Adjustment = -75.913 + 19.447 * log("distance-from-origin")
 
-pred <- data.table(cbind(x,a))
+pred <- data.table(Group,x,a)
 
 #figA <- figA + geom_point(data=pred, aes(x, a))
 #pred <- data.table(cbind(x=pos,a = a1))
