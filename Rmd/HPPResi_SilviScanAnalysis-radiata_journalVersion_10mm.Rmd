@@ -73,6 +73,7 @@ library(grDevices)   #For superscripts in caption
 #library(drc)        #Michaeilis-Menton curve fitting
 
 #library(shiny)
+library(jsonlite)
 library(colorRamps) # provides green2red divergent colormap which I like 
 
 source("../R/PlottingFunctions.R")
