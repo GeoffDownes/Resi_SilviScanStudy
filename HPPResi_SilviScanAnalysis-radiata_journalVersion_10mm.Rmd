@@ -41,6 +41,14 @@ text-align: justify}
 </style>
 ```
 
+
+```r
+if (!require(jsonlite)) {
+  install.packages("jsonlite")
+  library(jsonlite)
+}
+```
+
 ------------------------------------------------------------------------
 
 ```{r setup, include=FALSE}
