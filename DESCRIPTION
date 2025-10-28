@@ -1,0 +1,33 @@
+Package: Resi_SilviScanStudy
+Type: Package
+Title: Copy of the Resi-SilviScan radial variation study 
+Version: 1.2
+Author: Geoffrey M. Downes
+Maintainer: Geoff Downes <geoff.downes@forestquality.com>
+Description: A repo of the data and report from the published manuscript
+    that reproduces the paper.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    jsonlite,
+    tidyverse,
+    data.table,
+    readxl,
+    distill,
+    lmodel2,
+    agricolae,
+    kableExtra,
+    glue,
+    graphics,
+    grid,
+    gridExtra,
+    ggpubr,
+    maps,
+    mapdata,
+    grDevices,
+    coloRamps
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
